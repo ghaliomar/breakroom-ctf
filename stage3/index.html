@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Breakroom CTF</title>
+<meta name="description" content="A small puzzle hunt that starts on a whiteboard.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<script src="../gate.js" defer></script>
+</head>
+<body data-bundle="stage3.bin" data-store-key="breakroom.stage3.passphrase">
+<main>
+  <p class="brand"><b>breakroom</b>-ctf</p>
+
+  <section class="gate" id="gate">
+    <h1>Stage 3 is locked.</h1>
+    <p>Enter the flag from stage 2 to unlock it.</p>
+    <form id="unlock-form" autocomplete="off">
+      <input id="passphrase" name="passphrase" type="text" spellcheck="false" placeholder="BREAKROOM{...}" aria-label="Stage 2 flag" required>
+      <button class="btn" id="unlock-btn" type="submit">Unlock</button>
+    </form>
+    <p class="status" id="status" role="status"></p>
+  </section>
+
+  <div id="stage" hidden></div>
+  <div class="footer-actions" id="footer" hidden>
+    <button type="button" class="btn ghost small" id="lock-btn">Lock this page again</button>
+  </div>
+</main>
+</body>
+</html>
